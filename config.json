@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "^/css(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?$",
+      "dest": "/$1",
+      "check": true
+    },
+    {
+      "src": "^/js(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?$",
+      "dest": "/$1",
+      "check": true
+    },
+    {
+      "src": "^/images(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?$",
+      "dest": "/$1",
+      "check": true
+    },
+    {
+      "handle": "error"
+    },
+    {
+      "status": 404,
+      "src": "^(?!/api).*$",
+      "dest": "/404.html"
+    }
+  ],
+  "crons": []
+}
