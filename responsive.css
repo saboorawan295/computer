@@ -1,0 +1,457 @@
+/* ==========================================================================
+   GS COMPUTER - RESPONSIVE STYLESHEET
+   Mobile, Tablet & Small Desktop Breakpoint Optimizations.
+   ========================================================================== */
+
+/* --- Mobile Navigation Drawer (Shared) --- */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  max-width: 85vw;
+  height: 100vh;
+  background: #090e1a;
+  border-right: 1px solid var(--border-medium);
+  box-shadow: 15px 0 50px rgba(0, 0, 0, 0.8);
+  z-index: 2200;
+  transform: translateX(-100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-drawer.active {
+  transform: translateX(0);
+}
+
+.mobile-nav-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-close {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-medium);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mobile-nav-body {
+  padding: 1.5rem;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.mobile-nav-link i {
+  color: var(--accent-cyan);
+  width: 20px;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  background: rgba(37, 99, 235, 0.15);
+  color: #ffffff;
+}
+
+.mobile-nav-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* ==========================================================================
+   TABLET LANDSCAPE & SMALL DESKTOP (max-width: 1024px)
+   ========================================================================== */
+@media screen and (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    text-align: center;
+  }
+
+  .hero-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-trust-bar {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .hero-visual-col {
+    max-width: 580px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-visual {
+    max-width: 550px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .offer-content-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .offer-badge, .offer-coupon-pill {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .product-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .modal-prod-img-box {
+    height: 260px;
+  }
+
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   TABLET PORTRAIT & MOBILE (max-width: 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* Top bar adjustments */
+  .top-bar-right {
+    display: none;
+  }
+
+  .top-bar-inner {
+    justify-content: center;
+  }
+
+  /* Header adjustments */
+  .nav-links, .nav-actions .btn {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .floating-tech-card.card-top-left {
+    left: 5px;
+    top: 5px;
+  }
+
+  .floating-tech-card.card-bottom-right {
+    right: 5px;
+    bottom: 5px;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-banner-wrap {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .offer-title {
+    font-size: 2rem;
+  }
+
+  .timer-units {
+    gap: 0.5rem;
+  }
+
+  .timer-unit-item {
+    min-width: 54px;
+    padding: 0.6rem 0.3rem;
+  }
+
+  .timer-num {
+    font-size: 1.6rem;
+  }
+
+  .timer-divider {
+    font-size: 1.2rem;
+  }
+
+  .contact-form-box {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .floating-whatsapp-widget {
+    right: 76px;
+    bottom: 20px;
+  }
+
+  .whatsapp-float-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+
+  .back-to-top-btn {
+    right: 18px;
+    bottom: 20px;
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Map adjustments on mobile */
+  .map-header-strip {
+    padding: 1.2rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .map-actions-group {
+    width: 100%;
+  }
+
+  .map-actions-group .btn {
+    flex: 1;
+    min-width: 120px;
+    font-size: 0.78rem;
+    padding: 0.5rem 0.6rem;
+  }
+
+  .map-iframe-container {
+    height: 300px;
+  }
+
+  .map-footer-notice {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .contact-quick-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .cart-drawer {
+    width: 100vw;
+  }
+
+  .modal-dialog {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .product-modal-grid {
+    padding: 0.5rem;
+  }
+
+  .search-modal-header {
+    padding: 1.2rem 1rem;
+  }
+
+  .search-input-field {
+    font-size: 1.05rem;
+  }
+
+  .search-tags-row {
+    padding: 0.6rem 1rem;
+  }
+
+  .search-results-area {
+    padding: 1rem;
+  }
+
+  .search-result-item {
+    grid-template-columns: 44px 1fr;
+    gap: 0.75rem;
+  }
+
+  .search-result-actions {
+    grid-column: 1 / -1;
+    justify-content: flex-end;
+  }
+}
+
+/* ==========================================================================
+   EXTRA SMALL MOBILE (max-width: 480px)
+   ========================================================================== */
+@media screen and (max-width: 480px) {
+  .hero-trust-bar {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .about-stats-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .about-experience-card {
+    right: 0;
+    bottom: -15px;
+    padding: 1rem 1.2rem;
+  }
+
+  .exp-number {
+    font-size: 2.2rem;
+  }
+
+  .toast-container {
+    left: 16px;
+    right: 16px;
+    bottom: 80px;
+  }
+
+  .toast-item {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .brand-logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+  }
+}
+

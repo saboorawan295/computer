@@ -1,0 +1,8 @@
+# robots.txt for GS Computer
+# Website: https://gscomputer.pk/
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://gscomputer.pk/sitemap.xml
